@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Name</title>
+	<meta name="viewport" content="width=device-width">
+	<!-- UIkit CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+
+	<!-- UIkit JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(window).on('load',function () {
+			UIkit.notification({
+				message: 'Welcome to the newer version of the website',				
+				pos: 'bottom-center',
+				timeout: 1200
+			});
+		});
+
+	</script>
+	<style type="text/css">
+	.footer {		
+		bottom: 0;
+		right: 0;
+		left: 0;
+		padding: 1rem;
+		background-color: #efefef;
+		text-align: center;
+	}
+
+
+	@media only screen and (min-width: 768px) {
+		.footer {
+			position: fixed;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			padding: 1rem;
+			background-color: #efefef;
+			text-align: center;
+		}
+	}
+
+	.uk-margin {
+		margin-bottom: 0px;
+	}
+
+	
+</style>
+
+
+</head>
+<body>
+	<!--sidebar, all other content comes inside -->
+	<div class="uk-offcanvas-content">
+		<!-- <nav class="uk-navbar-container uk-margin" uk-navbar style="background: linear-gradient(180deg,#5d4b66 -44.44%,red 694.44%);color: white;"> -->
+			<nav class="uk-navbar-container uk-margin" uk-navbar>
+				<!-- left button on nav-->
+				<div class="uk-navbar-left">
+					<button type="button" uk-toggle="target: #offcanvas-nav-primary" class="uk-navbar-toggle" uk-navbar-toggle-icon href=""></button>
+				</div>
+				<div class="uk-navbar-center">        
+					<a class="uk-navbar-item uk-logo" href="#">Website Name</a>
+				</div>
+			</nav>
+
+
+			<!-- This is side navbar-->
+			<div id="offcanvas-nav-primary" uk-offcanvas="overlay: true">
+				<div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+					<ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+						<li class="uk-parent">  <a href="#">Home</a>     </li>
+						<li class="uk-parent">  <a href="legal.html">Terms of Use</a>     </li>
+						<li class="uk-parent">  <a href="legal.html">Privacy Policy</a>     </li>
+					</ul>
+
+				</div>
+			</div>
+
+
+			<!-- This is slideshow-->
+			<div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="min-height: 300; max-height: 500; animation: push">
+
+				<ul class="uk-slideshow-items" >
+					<li>
+						<img src="photo.jpg" uk-cover>
+					</li>
+					<li>
+						<img src="dark.jpg" alt="" uk-cover>
+					</li>
+					<li>
+						<img src="light.jpg" alt="" uk-cover>
+					</li>
+				</ul>
+
+				<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+				<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+			</div>
+
+
+
+
+
+			<!--Products-->
+
+			<h1 class="uk-heading-primary uk-text-center">Our Products</h1>	
+
+			<div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-text-center" uk-grid>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">Item</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">Item</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">Item</div>
+				</div>
+				<div>
+					<div class="uk-card uk-card-default uk-card-body">Item</div>
+				</div>
+			</div>
+
+			<!--Products 2-->
+			<div uk-slideshow>
+
+				<div class="uk-position-relative uk-visible-toggle uk-light">
+
+					<ul class="uk-slideshow-items">
+						<li>
+							<div class="uk-child-width-1-4@s" uk-grid>
+								<div>
+									<div class="uk-light uk-background-secondary uk-padding">
+										<h3>Light</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+								<div>
+									<div class="uk-dark uk-background-muted uk-padding">
+										<h3>Dark</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+								<div>
+									<div class="uk-light uk-background-secondary uk-padding">
+										<h3>Light</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+								<div>
+									<div class="uk-dark uk-background-muted uk-padding">
+										<h3>Dark</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+							</div>
+						</li>
+
+						<li>
+							<div class="uk-child-width-1-4@s" uk-grid>
+								<div>
+									<div class="uk-light uk-background-secondary uk-padding">
+										<h3>Light</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+								<div>
+									<div class="uk-dark uk-background-muted uk-padding">
+										<h3>Dark</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+								<div>
+									<div class="uk-light uk-background-secondary uk-padding">
+										<h3>Light</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+								<div>
+									<div class="uk-dark uk-background-muted uk-padding">
+										<h3>Dark</h3>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+										<button class="uk-button uk-button-default">Button</button>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+					<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+				</div>
+
+				<ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
+
+			</div>
+
+
+
+
+		</div>
+		<div class="footer text-center" id="legalFooter">
+			Legals : <a href="legal.html">Privacy Policy and Terms of Use</a>
+		</div>
+
+
+
+	</body>
+	</html>
